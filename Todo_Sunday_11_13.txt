@@ -1,0 +1,22 @@
+New Algorithm Ideas/What's Next
+
+Sensor Data that we need/want:
+    Accelerometer 
+    Gyroscope (Rate of angular change)
+    Flight Director? 
+    
+How to Approach the problem:
+    Want to create an algorithm using Acc data/see how well we can use small values from sensor (Plausibility Test)
+            *More Experimenting with values, see how they change as quad is hovering stable/ when it drifts (live log test)
+            * Where do we want to put the code?
+                *Stabalizer.c?
+                *Commander.c?
+                *Attitude_pid_controller.c?
+           
+        If (1)
+            Create a hook that reads in gyro (Flight Director?) that changes behavior during too much pitch/roll
+        Else
+            Find new sensor data that is useful to use
+               Seek outside help? (Jones?/Elia?)
+               Search for new videos/forumn posts of hobbyist to see their methods
+        
