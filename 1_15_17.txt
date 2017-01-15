@@ -8,3 +8,4 @@ TODO:
     ->Moarr testing/logs of stable hovers.
     ->Average the log data to see what's going on when the quad is stable.
     ->Figure out the values of acc/gyro and see how they relate to each other.
+    ->lolz
