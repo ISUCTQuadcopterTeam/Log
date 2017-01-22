@@ -1,0 +1,8 @@
+Logs data:
+    ->Z acceleration is small (max .16 in magnitude)
+    ->X and Y show a delta of about max .32 and .36, respectively.
+    
+TODO:
+    ->Algorithm development
+    ->Get more flight data (excel) & double-check the X,Y,Z values of acc/rate of rotation
+    
