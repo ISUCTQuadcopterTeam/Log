@@ -1,0 +1,13 @@
+Set the desired pitch (Y) and roll (X) acceleration values to about .075
+Set Z acceleration to about 1.1
+
+*The rates of angle change are inversely related to the acceleration.
+**Reading the acceleration values and calculating the inversely related gyro values (ängles?)
+
+In stabilizer.c, wrap commanderGetSetpoint in #ifdef -> else block, then assign the values to setpoint data type.
+(Specifically, the setpoint->attitudeRate.roll/pitch/yaw) 
+To do that, we need equivalents of commanderGetActivePitch/Roll/Yaw
+
+
+TODO:
+***Come up with an idea to calculate pitch/yaw/roll (find the file & lines where the values are calculated)
