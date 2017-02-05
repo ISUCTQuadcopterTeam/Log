@@ -1,0 +1,13 @@
+Use alt hold with the custom (our) code?
+Figure out exactly what alt hold does. Does it only control the altitude? If so, we could use our own values of acc/rate with the cotrol from alt hold.
+(We still need to figure out how to convert acc/rate to pitch/yaw/roll)
+
+***TODO:
+    Ilya: look for the formula to figure out the values for pitch/yaw/roll are in to code. If unable, find the pitch/roll/yaw formula + figure out where to plug it in.
+    Pat + Mace: look through the files Mace mentioned today and research/follow the functions in the files; find out as much as possible about the functions/data involved.
+    Files: cortoller_pid line 35
+           attitude_controller_pid 148
+           position_controller_pid 181
+           (not the exact names of the files)
+           
+Fix github page (update it with new firmware)
