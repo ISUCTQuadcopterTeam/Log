@@ -1,0 +1,16 @@
+Two cases:
+    case 1:
+        the quad is stable, so we can substitute the current values of the sensors
+        for the desired values in PIDs
+    case 2: (the accelerations/rates of rotation are past the threshold)
+        the setpoint will become a combination of 
+        pre-set acc/gyros from the excel spreadsheet.
+        We need to pass the acc/gyro data through sensfusion update
+        and also pass it a custom control_t struct.
+        
+        
+***TODO:
+-Ilya + Mace: Need to research on sensfusion update (before and after the calls)
+              Become familiar with control_t & sensor_t
+-Pat: Ask Ilya and Mace (separately) with two distinct, specific questions 
+     on the functions that are executing in the main loop (in stabilizer.c, lines 96-131
