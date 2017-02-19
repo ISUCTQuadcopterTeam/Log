@@ -1,0 +1,16 @@
+Potentially look into position estimation.
+
+When the Z acceleration is more than 1.1/X or Y acceleration is more than .01, trigger the algorithm
+When X/Y rate of rotation > 10 or < -10
+
+Required setpoints:
+Z acceleration: 1.1; X/Y: .075
+????
+***TODO:
+    ->research mode
+    ->setpoint calculation/relations
+    ->research althold mode, find out how to track variable in stabalizer.c (or find equivalent solution to enabling/disabling "Hover Mode")
+    
+Homework: 
+Pat/Mace/Ilya:Figure out where to put our own custom setpoints(and what to put in them)
+              Find 1 solution to "turning on/off" our own algorithm in real time
