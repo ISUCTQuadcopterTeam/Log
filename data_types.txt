@@ -1,0 +1,43 @@
+typedef struct control_s {
+  int16_t roll;
+  int16_t pitch;
+  int16_t yaw;
+  float thrust;
+} control_t;
+
+roll, pitch, yaw get populated by attitude_pid_controller.c 
+
+
+typedef struct sensorData_s {
+  Axis3f acc;
+  Axis3f gyro;
+  Axis3f mag;
+  baro_t baro;
+  point_t position;
+} sensorData_t;
+Axis3f is basically an array of three things; point_t is a point in three dimensions (with timestamp attached to it);  
+
+typedef struct baro_s {
+  float pressure;
+  float temperature; -> temperature of the surroundings
+  float asl;
+} baro_t;
+
+typedef struct setpoint_s {
+  uint32_t timestamp;
+
+  attitude_t attitude; -> goes to PID box 1
+  attitude_t attitudeRate; -> goes to PID box 2
+  float thrust;
+  point_t position;
+  velocity_t velocity;
+
+  struct {
+    mode_t x; 
+    mode_t y;
+    mode_t z;
+    mode_t roll;
+    mode_t pitch;
+    mode_t yaw;
+  } mode; -> HUH?
+} setpoint_t;
