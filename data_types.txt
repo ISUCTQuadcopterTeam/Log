@@ -1,3 +1,4 @@
+===============================================================================================================================
 typedef struct control_s {
   int16_t roll;
   int16_t pitch;
@@ -5,9 +6,10 @@ typedef struct control_s {
   float thrust;
 } control_t;
 
-roll, pitch, yaw get populated by attitude_pid_controller.c 
+roll, pitch, yaw get populated by attitude_pid_controller.c; the resulting values of all the PID calculations.
 
-
+int16_t = 0b1111 1111 1111 1111;
+===============================================================================================================================
 typedef struct sensorData_s {
   Axis3f acc;
   Axis3f gyro;
@@ -15,14 +17,15 @@ typedef struct sensorData_s {
   baro_t baro;
   point_t position;
 } sensorData_t;
-Axis3f is basically an array of three things; point_t is a point in three dimensions (with timestamp attached to it);  
 
+Axis3f is basically an array of three things; point_t is a point in three dimensions (x, y, z, with timestamp attached to it);  
+===============================================================================================================================
 typedef struct baro_s {
   float pressure;
   float temperature; -> temperature of the surroundings
   float asl;
 } baro_t;
-
+===============================================================================================================================
 typedef struct setpoint_s {
   uint32_t timestamp;
 
@@ -41,3 +44,12 @@ typedef struct setpoint_s {
     mode_t yaw;
   } mode; -> HUH?
 } setpoint_t;
+===============================================================================================================================
+typedef struct state_s {
+  attitude_t attitude;
+  quaternion_t attitudeQuaternion; -> MYSTERY
+  point_t position;
+  velocity_t velocity;
+  acc_t acc;
+} state_t;
+===============================================================================================================================

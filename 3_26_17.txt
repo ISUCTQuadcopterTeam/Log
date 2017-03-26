@@ -1,0 +1,6 @@
+TODO:
+    Button trigger (Pat, Ilya):
+        -> Need a way to trigger the algorithm from a controller.
+        -> Research the way altHoldMode is handled in Python code
+    Algorithm (Mace, Ilya):
+        -> Input the fixed (?) acceleration/rotation rate into custom (?) PIDs.
