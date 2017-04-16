@@ -1,0 +1,11 @@
+Where(solved)
+    Need to place values for our Accel into the crtpCommanderRpytDecodeSetpoint function call in file name crtp_commander_rypt.c
+How
+    We know we want to place a conditional into the end of the function call, but what do we place in it? (Doesn't need to change dynamically, always assume stable condition at beginning). 
+What
+    What values are we inserting and how did we find them? 
+        Possible solution-The average values for acceleration in the x/y that we found for a stable flight (great place to start and test results) 
+        Look at the formulas in the function call sensfusion6GetEulerRPY, and mimic it in our function call
+        
+Convert accelerations to pitch/roll values:
+    https://theccontinuum.com/2012/09/24/arduino-imu-pitch-roll-from-accelerometer/
